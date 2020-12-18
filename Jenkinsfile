@@ -19,12 +19,7 @@ pipeline {
                 sh 'cd build/ && ctest -T Test'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-        stage('Docker Publosh') {
+        stage('Docker Publish') {
             agent any
             
             when {
@@ -37,7 +32,7 @@ pipeline {
                 echo "Application Publishing"
                 checkout scm
                 script {
-                    def customImage = docker.build("anovotarsk/lab5:${env.BUILD_ID}")
+                    def customImage = docker.build("anovotarsk/exam:${env.BUILD_ID}")
                     docker.withRegistry('', registryCredential ) {
                         customImage.push()
                     }
