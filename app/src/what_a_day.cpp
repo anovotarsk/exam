@@ -15,19 +15,19 @@ std::string what_a_day(int day, int month, int year) {
 
     switch (week_day){
         case 0:
-            return "Sunday";
+            return "Sunday 0";
        case 1:
-           return "Monday";
+           return "Monday 1";
        case 2:
-           return "Tuesday";
+           return "Tuesday 2";
        case 3:
-           return "Wednesday";
+           return "Wednesday 3";
        case 4:
-           return "Thursday";
+           return "Thursday 4";
        case 5:
-           return "Friday";
+           return "Friday 5";
        case 6:
-           return "Saturday";
+           return "Saturday 6";
     }
     return "Error";
 }
