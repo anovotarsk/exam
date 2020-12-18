@@ -6,5 +6,5 @@
 int main() {
     std::string day = what_a_day(18, 12, 2020);
 
-    assert(day == "Friday");
+    assert(day == "Friday 5");
 }
